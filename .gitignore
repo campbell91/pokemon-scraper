@@ -1,0 +1,16 @@
+## VS Code ##
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# dotenv environment variables file (contains MongoDB connection string)
+.env
+
+# Node modules
+node_modules
+
+# Folder containing the PNG files of each downloaded sprite
+images
