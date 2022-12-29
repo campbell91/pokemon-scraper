@@ -489,20 +489,20 @@ async function main() {
 
     // there are technically 905 different Pokemon, but with variants and regional changes the Serebii national dex for
     // gen8 has 845 entry pages
-    for (i = 0; i < 845; i++) {
-        console.time("allData");
-        let nextPokemonUrl = await scrape(page);
-        await page.close();
-        console.timeEnd("allData");
+    // for (i = 0; i < 845; i++) {
+    //     console.time("allData");
+    //     let nextPokemonUrl = await scrape(page);
+    //     await page.close();
+    //     console.timeEnd("allData");
 
-        if (nextPokemonUrl != null) {
-            console.log('Next Pokemon... ' + nextPokemonUrl);
-            console.time("nextPage");
-            page = await browser.newPage();
-            await page.goto(nextPokemonUrl);
-            console.timeEnd("nextPage");
-        }
-    }
+    //     if (nextPokemonUrl != null) {
+    //         console.log('Next Pokemon... ' + nextPokemonUrl);
+    //         console.time("nextPage");
+    //         page = await browser.newPage();
+    //         await page.goto(nextPokemonUrl);
+    //         console.timeEnd("nextPage");
+    //     }
+    // }
 
     browser.close();
     
